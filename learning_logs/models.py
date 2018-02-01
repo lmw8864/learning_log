@@ -20,8 +20,8 @@ class Entry(models.Model):
 
     class Meta:
         """모델 관리에 필요한 추가 정보를 저장합니다."""
-        verbose_name_plural = 'entries'
+        verbose_name_plural = 'entries'  # 복수형 이름 직접 지정 (이름을 따로 지정해주지 않으면 장고는 Entrys 라는 복수형을 직접 만들어서 씀 = 틀린 단어)
 
     def __str__(self):
         """모델에 관한 정보를 문자열 형태로 반환합니다."""
-        return self.text[:50] + "..."
+        return self.text[:50] + "..."  # 텍스트의 첫 50자만 표시 + 생략 부호(...)
