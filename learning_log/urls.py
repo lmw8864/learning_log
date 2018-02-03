@@ -18,5 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'', include('learning_logs.urls')),
+    url(r'', include('learning_logs.urls')),  # Django 2.0 변경사항: namespace 대신 app_name 지정
 ]
